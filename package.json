@@ -1,0 +1,31 @@
+{
+  "name": "codesnippets",
+  "version": "0.0.1",
+  "description": "Build an organizer for holding your and others' code snippets. Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takaides/Code-Snippet-Organizer.git"
+  },
+  "author": "Ben Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takaides/Code-Snippet-Organizer/issues"
+  },
+  "homepage": "https://github.com/takaides/Code-Snippet-Organizer#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.5",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.6",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}

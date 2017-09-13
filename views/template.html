@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Code Snippet</h2>
+      <!-- Blank Space -->
+      <!-- if authenticated, current user & logout
+        else login fields -->
+      <div id="user-login">
+        <form id="login" action="/login" method="post">
+          <input type="text" name="username" placeholder="Username">
+          <input type="password" name="password" placeholder="Password">
+          <input type="submit" name="submit" value="Login">
+        </form>
+      </div>
+        <!-- or -->
+      <div id="userLoggedIn">
+        <span id="welcome">Welcome, {{user.name}}.</span>
+        <a href="/logout">Log out</a>
+      </div>
+
+    </header>
+    <main>
+      <section>
+        <!-- Put page content here -->
+
+
+
+
+
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

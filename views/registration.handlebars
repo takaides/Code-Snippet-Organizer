@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Registration</h2>
+      <!-- Blank Space -->
+      <!-- if authenticated, current user & logout
+        else login fields -->
+      <div id="user-login">
+        <form id="login" action="/login" method="post">
+          <input type="text" name="username" placeholder="Username">
+          <input type="password" name="password" placeholder="Password">
+          <input type="submit" name="submit" value="Login">
+        </form>
+      </div>
+
+    </header>
+    <main>
+      <section>
+
+    <h1>Register</h1>
+
+    <form action="/register" method="post">
+      Username: <input type="text" name="username" /><br />
+      Name: <input type="text" name="name" /><br />
+      Password: <input type="password" name="password" /><br />
+      <button>Register</button>
+    </form>
+  </section>
+  </main>
+  </div>
+  </body>
+
+  </html>

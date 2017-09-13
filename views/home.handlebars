@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title>Snippets</title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Code Snippet</h2>
+      <!-- Blank Space -->
+      <!-- if authenticated, current user & logout
+        else login fields -->
+      <div class="userLoggedIn">
+        <span id="welcome">Welcome, {{user.name}}</span>
+        <a href="/logout">Log out</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <section class="globalSearchBar">
+
+          <form action="/search/globalresults" method="post">
+            <input id="globalSearch" type="text" name="search" value="" placeholder="Search entire database for code snippets">
+            <button>Search</button>
+          </form>
+
+        </section>
+        <hr>
+        <section class="userSnippets">
+
+          <div class="userSnippetsHeader">
+            <h2>Your Snippets</h2>
+            <a href="/createsnippet/new">Create a code snippet!</a>
+          </div>
+          <br>
+          <form action="/search/userresults" method="post">
+            <input id="userSearch" type="text" name="search" value="" placeholder="Search your snippets by language or tag">
+            <button>Search</button>
+          </form>
+          <br>
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Body</th>
+              <th>Optional Notes</th>
+              <th>Language</th>
+              <th>Tags</th>
+            </tr>
+            {{#snippets}}
+              <tr>
+                <td><a href="/search/{{title}}">{{title}}</a></td>
+                <td>{{body}}</td>
+                <td>{{optionalNotes}}</td>
+                <td>{{language}}</td>
+                <td>{{tags}}</td>
+                <td><a href="/deleteSnippet/?id={{_id}}">X</a></td>
+              </tr>
+            {{/snippets}}
+
+          </table>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

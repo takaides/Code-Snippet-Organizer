@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Code Snippet</h2>
+      <!-- Blank Space -->
+      <div id="userLoggedIn">
+        <span id="welcome">Welcome, {{user.name}}! </span>
+        <a href="/logout">Log out</a>
+      </div>
+
+    </header>
+    <main>
+      <section>
+
+        <h2>Code Snippet Creator</h2>
+        <a href="/">Back</a>
+
+        <form id="createSnippet" action="/createsnippet/create" method="post">
+          Title: <input type="text" name="title" /><br />
+          Body: <input type="text" name="body" /><br />
+          Optional Notes: <input type="text" name="optionalNotes" /><br />
+          Language: <input type="text" name="language" /><br />
+          Tags: <input type="text" name="tags" /><br />
+
+          {{#if user._id}}
+            <input type="hidden" name="createdBy" value="{{user.username}}" />
+          {{/if}}
+          <button>Create!</button>
+        </form>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Search Results</h2>
+      <!-- Blank Space -->
+
+      <div id="userLoggedIn">
+        <span id="welcome">Welcome, {{user.name}}.</span>
+        <a href="/logout">Log out</a>
+      </div>
+
+    </header>
+    <main>
+      <section>
+
+        <h1>Search Results</h1>
+
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Optional Notes</th>
+            <th>Language</th>
+            <th>Tags</th>
+          </tr>
+          {{#snippets}}
+            <tr>
+              <td><a href="/search/{{title}}">{{title}}</a></td>
+              <td>{{body}}</td>
+              <td>{{optionalNotes}}</td>
+              <td>{{language}}</td>
+              <td>{{tags}}</td>
+            </tr>
+          {{/snippets}}
+
+        </table>
+
+        <a href="/">Home</a>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

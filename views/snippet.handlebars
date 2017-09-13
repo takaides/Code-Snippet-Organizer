@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <ul>
+          <!-- home -->
+          <li><a href="/">Home</a></li>
+          <!-- snippets -->
+          <!-- <li><a href="/">Snippets</a></li> -->
+          <!-- other users -->
+          <!-- <li><a href="#">Users</a></li> -->
+        </ul>
+      </nav>
+      <!-- Blank Space -->
+      <!-- Title -->
+      <h2>Code Snippet</h2>
+      <!-- Blank Space -->
+      <div id="userLoggedIn">
+        <h4 id="welcome">Welcome, {{user.name}}</h4>
+        <a href="/logout">Log out</a>
+      </div>
+
+    </header>
+    <main>
+      <section>
+
+        <div class="snippet">
+
+          <h2>{{title}}</h1>
+          <h3>{{body}}</h4>
+          <h4>Notes:  {{optionalNotes}}</h4>
+          <h4>Language:  {{language}}</h4>
+          <h4>Tags:  {{tags}}</h4>
+          <h4>Created By:  {{createdBy}}</h4>
+        {{/snippets}}
+      </div>
+      <a href="/">Back</a>
+
+    </section>
+  </main>
+</div>
+</body>
+
+</html>
